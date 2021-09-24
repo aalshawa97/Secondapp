@@ -29,21 +29,6 @@ import com.google.firebase.firestore.QuerySnapshot
 
 import com.google.android.gms.tasks.OnCompleteListener
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class MainActivity : AppCompatActivity() {
     var TAG = MainActivity::class.java.simpleName
     lateinit var db:  FirebaseFirestore
