@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/15039/AndroidStudioProjects/Secondapp/app/src/main/res/layout/activity_basic_map_demo.xml" value="0.125" />
         <entry key="..\:/Users/15039/AndroidStudioProjects/Secondapp/app/src/main/res/layout/activity_location.xml" value="0.13072916666666667" />
         <entry key="..\:/Users/15039/AndroidStudioProjects/Secondapp/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/15039/AndroidStudioProjects/Secondapp/app/src/main/res/layout/activity_maps.xml" value="0.12864583333333332" />
+        <entry key="..\:/Users/15039/AndroidStudioProjects/Secondapp/app/src/main/res/layout/fragment_maps.xml" value="0.12864583333333332" />
         <entry key="..\:/flutterprojects/Secondapp/app/src/main/res/layout/activity_main.xml" value="0.19746376811594202" />
       </map>
     </option>
