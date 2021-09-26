@@ -1,4 +1,4 @@
-package com.abdul.secondapp.com.abdul.secondapp
+package com.abdul.secondapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
