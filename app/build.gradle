@@ -8,6 +8,11 @@ android {
     compileSdk 30
 
     defaultConfig {
+        Properties properties = new Properties()
+
+        properties.load(project.rootProject.file('local.properties').newDataInputStream())
+        manifestPlaceholders = [AIzaSyBxMlryGve_zW1gVMT9QolKJyVKWfG2uRw: "${properties.getProperty('AIzaSyBxMlryGve_zW1gVMT9QolKJyVKWfG2uRw')}"]
+
         applicationId "com.abdul.secondapp"
         minSdk 21
         targetSdk 30

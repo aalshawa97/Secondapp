@@ -23,6 +23,11 @@ import androidx.annotation.NonNull
 import androidx.core.app.ActivityCompat
 import com.google.android.gms.common.api.ResolvableApiException
 import com.google.android.gms.location.*
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 
 import com.google.android.gms.tasks.OnFailureListener
 
@@ -37,7 +42,7 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.android.gms.tasks.Task
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), OnMapReadyCallback{
     var TAG = MainActivity::class.java.simpleName
     lateinit var db:  FirebaseFirestore
     private var fusedLocationClient: FusedLocationProviderClient? = null
@@ -50,6 +55,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val mapFragment = supportFragmentManager
+            .findFragmentById(R.id.map) as SupportMapFragment
+        mapFragment.getMapAsync(this)
+
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         locationCallback = object : LocationCallback() {
             override fun onLocationResult(locationResult: LocationResult?) {
@@ -238,6 +247,16 @@ class MainActivity : AppCompatActivity() {
                 )
             }
             .addOnFailureListener { e -> Log.w(TAG, "Error adding document", e) }
+    }
+
+    override fun onMapReady(googleMap: GoogleMap?) {
+        if (googleMap != null) {
+            googleMap.addMarker(
+                MarkerOptions()
+                    .position(LatLng(0.0, 0.0))
+                    .title("Marker")
+            )
+        }
     }
 
 
