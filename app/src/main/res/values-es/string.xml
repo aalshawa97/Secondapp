@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SoporteDiferentes Tamaños de Pantalla</string>
+    <string name="latitude_label">Latitud</string>
+    <string name="longitude_label">Longitud</string>
+    <string name="no_location_detected">
+        No se detectó ninguna ubicación. Asegúrese de que la ubicación esté habilitada en el dispositivo.
+    </string>
+    <string name="permission_rationale">Location permission is needed for core functionality</string>
+    <string name="permission_denied_explanation">Se necesita permiso de ubicación para la funcionalidad principal</string>
+    <string name="settings">Ajustes</string>
+    <string name="title_activity_maps">MapasActividad</string>
+    <string name="title_activity_call_back">MapCallBack</string>
+    <string name="basic_map_demo_activity">BasicMapDemoActivity</string>
+    <string name="title_activity_location">UbicaciónActividad</string>
+    <string name="title_activity_map_callback">MapCallBack</string>
+    <string name="title_activity_maps_marker">MapsMarkerActivity</string>
+    <string name="title_activity_main">Actividad principal</string>
+</resources>

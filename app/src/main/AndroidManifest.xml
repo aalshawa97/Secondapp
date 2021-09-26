@@ -94,6 +94,17 @@
         </activity>
 
         <activity
+            android:name=".MapCallback"
+            android:exported="true"
+            android:label="@string/title_activity_map_callback">
+        </activity>
+        <activity
+            android:name=".Second"
+            android:exported="true"
+            android:label="@string/app_name"
+            >
+        </activity>
+        <activity
             android:name=".MapsMarkerActivity"
             android:exported="true"
             android:label="@string/title_activity_maps_marker">
@@ -101,10 +112,11 @@
         <!-- Any inner elements would go here. -->
         <!-- </service> -->
         <activity
-            android:name=".MapCallback"
+            android:name=".DifferentScreenSizes"
             android:exported="true"
-            android:label="@string/title_activity_map_callback">
-            <intent-filter>
+            android:label="@string/title_activity_different_screen_sizes"
+             >
+        <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
