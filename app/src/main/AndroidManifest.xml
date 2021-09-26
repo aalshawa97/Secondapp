@@ -42,9 +42,9 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name=".MapCallback"
+            android:name=".com.abdul.secondapp.BasicMapDemoActivity"
             android:exported="true"
-            android:label="@string/title_activity_call_back">
+            android:label="@string/basic_map_demo_activity">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
@@ -60,7 +60,8 @@
 
         <activity
             android:name=".LocationActivity"
-            android:exported="true">
+            android:exported="true"
+            android:label="@string/title_activity_location">
         </activity>
         <!--
         <service
@@ -88,18 +89,21 @@
         -->
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:label="@string/title_activity_main">
         </activity>
 
         <activity
             android:name=".MapsMarkerActivity"
-            android:exported="true">
+            android:exported="true"
+            android:label="@string/title_activity_maps_marker">
         </activity>
         <!-- Any inner elements would go here. -->
         <!-- </service> -->
         <activity
-            android:name=".com.abdul.secondapp.BasicMapDemoActivity"
-            android:exported="true">
+            android:name=".MapCallback"
+            android:exported="true"
+            android:label="@string/title_activity_map_callback">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

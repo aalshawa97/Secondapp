@@ -13,4 +13,9 @@
     <string name="settings">Settings</string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="title_activity_call_back">MapCallBack</string>
+    <string name="basic_map_demo_activity">BasicMapDemoActivity</string>
+    <string name="title_activity_location">LocationActivity</string>
+    <string name="title_activity_map_callback">MapCallBack</string>
+    <string name="title_activity_maps_marker">MapsMarkerActivity</string>
+    <string name="title_activity_main">MainActivity</string>
 </resources>
