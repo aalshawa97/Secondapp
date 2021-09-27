@@ -1,5 +1,7 @@
 package com.abdul.secondapp
 
+import android.content.ContentValues.TAG
+import android.util.Log
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
 
@@ -27,5 +29,13 @@ class ExampleInstrumentedTest {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertNotEquals("com.abdul.secondapp", appContext.applicationInfo)
+    }
+
+    @Test
+    fun useApplicationInfoAppComponentFactory() {
+        // Context of the app under test.
+        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
+        //Log.d(TAG, "useApplicationInfoContext: " + appContext.applicationInfo.appComponentFactory)
+        assertEquals("androidx.core.app.CoreComponentFactory", appContext.applicationInfo.appComponentFactory)
     }
 }
