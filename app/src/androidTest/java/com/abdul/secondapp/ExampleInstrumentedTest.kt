@@ -21,4 +21,11 @@ class ExampleInstrumentedTest {
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("com.abdul.secondapp", appContext.packageName)
     }
+
+    @Test
+    fun useApplicationInfoContextAndMakeSureItIsNotTheSameAsThePackageName() {
+        // Context of the app under test.
+        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
+        assertNotEquals("com.abdul.secondapp", appContext.applicationInfo)
+    }
 }
