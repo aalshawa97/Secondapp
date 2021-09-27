@@ -45,11 +45,6 @@
             android:name=".com.abdul.secondapp.BasicMapDemoActivity"
             android:exported="true"
             android:label="@string/basic_map_demo_activity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
         </activity>
 
         <activity
@@ -62,6 +57,11 @@
             android:name=".LocationActivity"
             android:exported="true"
             android:label="@string/title_activity_location">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <!--
         <service
@@ -91,6 +91,7 @@
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/title_activity_main">
+
         </activity>
 
         <activity
@@ -116,11 +117,6 @@
             android:exported="true"
             android:label="@string/title_activity_different_screen_sizes"
              >
-        <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
