@@ -1,9 +1,12 @@
 package com.abdul.secondapp
 
 import android.content.ContentValues.TAG
+import android.os.Looper
 import android.util.Log
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.internal.runner.junit4.statement.UiThreadStatement.runOnUiThread
+import com.google.android.gms.maps.model.LatLng
 
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -35,7 +38,30 @@ class ExampleInstrumentedTest {
     fun useApplicationInfoAppComponentFactory() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        //Log.d(TAG, "useApplicationInfoContext: " + appContext.applicationInfo.appComponentFactory)
         assertEquals("androidx.core.app.CoreComponentFactory", appContext.applicationInfo.appComponentFactory)
     }
+
+    @Test
+    fun useLatitudeAndLongitudeSydney() {
+        // Context of the app under test.
+       Looper.prepare()
+        val sydney = LatLng(-34.0, 151.0)
+        runOnUiThread {
+            val sydneyTest = MapsActivity().getSydney()
+            assertEquals(sydney, sydneyTest)
+        }
+
+    }
 }
+
+/*
+@RunWith(RobolectricTestRunner::class)
+class MyActivityTest {
+    @Test
+    fun clickingButton_shouldChangeMessage() {
+        val activity: MyActivity = Robolectric.setupActivity(MyActivity::class.java)
+        activity.button.performClick()
+        assertThat(activity.message.getText()).isEqualTo("Robolectric Rocks!")
+    }
+}
+*/
